@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" fill="none">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="0.55" stop-color="#162032"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="linea" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F97316" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#F97316" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="brillo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 60) rotate(140) scale(420 300)">
+      <stop offset="0" stop-color="#F59E0B" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="rejilla" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#334155" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+    <style>
+      .titulo { font: 700 46px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #F8FAFC; letter-spacing: 0.5px; }
+      .lema { font: italic 400 24px Georgia, 'Times New Roman', serif; fill: #F59E0B; }
+      .detalle { font: 500 17px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #94A3B8; letter-spacing: 2.5px; }
+      .sub { font: 400 15px Georgia, 'Times New Roman', serif; fill: #CBD5E1; letter-spacing: 0.6px; }
+      .barrido { animation: barrer 6s ease-in-out infinite; }
+      @keyframes barrer { 0% { transform: translateX(-520px); } 100% { transform: translateX(1200px); } }
+      .barra { transform-origin: bottom; animation: crecer 2.4s ease-out both; }
+      .b2 { animation-delay: .15s } .b3 { animation-delay: .3s } .b4 { animation-delay: .45s } .b5 { animation-delay: .6s }
+      @keyframes crecer { from { transform: scaleY(0.1); opacity: .2 } to { transform: scaleY(1); opacity: 1 } }
+      @media (prefers-reduced-motion: reduce) { .barrido, .barra { animation: none; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" rx="18" fill="url(#fondo)"/>
+  <rect width="1200" height="320" rx="18" fill="url(#rejilla)"/>
+  <rect width="1200" height="320" rx="18" fill="url(#brillo)"/>
+
+  <!-- Gráfico de barras ascendente (crecimiento) -->
+  <g transform="translate(905 92)" opacity="0.9">
+    <rect class="barra b1" x="0"   y="120" width="34" height="60"  rx="6" fill="#334155"/>
+    <rect class="barra b2" x="50"  y="90"  width="34" height="90"  rx="6" fill="#475569"/>
+    <rect class="barra b3" x="100" y="60"  width="34" height="120" rx="6" fill="#64748B"/>
+    <rect class="barra b4" x="150" y="30"  width="34" height="150" rx="6" fill="#B45309"/>
+    <rect class="barra b5" x="200" y="0"   width="34" height="180" rx="6" fill="#F59E0B"/>
+    <path d="M17 108 L67 78 L117 48 L167 18 L217 -12" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 7"/>
+    <path d="M205 -18 L221 -14 L215 1" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Logotipo ING -->
+  <g transform="translate(64 58) scale(1.05)">
+    <path d="M12 22H38V28H31V64H38V70H12V64H19V28H12V22Z" fill="#F59E0B"/>
+    <path d="M48 70V34C48 25 55 21 63 21C69 21 74 24 78 30L103 60V24H94L109 8L124 24H115V63C115 70 110 73 103 73C98 73 94 70 90 65L60 31V70H48Z" fill="#F1F5F9"/>
+    <path d="M168 21H198V33H166C151 33 142 40 142 47C142 55 151 60 166 60H184V50H170V41H198V70H164C140 70 127 60 127 46C127 31 141 21 168 21Z" fill="#F59E0B"/>
+    <text class="sub" x="12" y="96">Asesoría Empresarial</text>
+  </g>
+
+  <text class="titulo" x="76" y="212">ING Asesoría Empresarial</text>
+  <text class="lema" x="78" y="250">Rigor financiero, seguridad jurídica y visión estratégica.</text>
+  <text class="detalle" x="78" y="288">AUDITORÍA · CONSULTORÍA · TERCERIZACIÓN · IMPUESTOS Y LEGAL · ECUADOR</text>
+
+  <!-- Línea dorada con barrido -->
+  <rect x="0" y="314" width="1200" height="6" fill="#1E293B"/>
+  <rect class="barrido" x="0" y="314" width="520" height="6" fill="url(#linea)"/>
+</svg>
